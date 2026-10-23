@@ -1,0 +1,21 @@
+{
+  "name": "seatsync-backend",
+  "version": "1.0.0",
+  "description": "SeatSync Backend API - Campus Resource Reservation & Peer Learning Platform",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "migrate": "node scripts/migrate.js",
+    "test:concurrency": "node scripts/test-concurrency.js",
+    "test:capacity": "node scripts/test-capacity.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.13.1"
+  }
+}
