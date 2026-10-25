@@ -167,7 +167,7 @@ export const ResourcesPage: React.FC = () => {
       {/* Top Header */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 24, flexWrap: 'wrap', gap: 16 }}>
         <div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8, color: '#818cf8', fontWeight: 600, fontSize: '0.85rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8, color: '#60a5fa', fontWeight: 600, fontSize: '0.85rem' }}>
             <Building2 size={16} /> MODULE A: RESOURCE RESERVATION
           </div>
           <h1 style={{ fontSize: '2.2rem', color: 'var(--text-main)', marginTop: 4 }}>Campus Facilities & Rooms</h1>
@@ -276,7 +276,7 @@ export const ResourcesPage: React.FC = () => {
                         textTransform: 'uppercase',
                         padding: '3px 8px',
                         background: 'rgba(99, 102, 241, 0.15)',
-                        color: '#818cf8',
+                        color: '#60a5fa',
                         borderRadius: 6,
                         fontWeight: 700,
                         letterSpacing: '0.04em',
@@ -297,7 +297,7 @@ export const ResourcesPage: React.FC = () => {
                   </div>
 
                   <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: '0.85rem', color: 'var(--text-muted)' }}>
-                    <Users size={15} color="#a855f7" />
+                    <Users size={15} color="#3b82f6" />
                     <span>Capacity: <strong style={{ color: 'var(--text-main)' }}>{resource.capacity} students</strong></span>
                   </div>
                 </div>
@@ -349,7 +349,7 @@ export const ResourcesPage: React.FC = () => {
                     <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginTop: 4 }}>
                       {b.location} • Booked: {new Date(b.created_at).toLocaleDateString()}
                     </div>
-                    <div style={{ fontSize: '0.82rem', color: '#818cf8', marginTop: 4, display: 'flex', alignItems: 'center', gap: 6 }}>
+                    <div style={{ fontSize: '0.82rem', color: '#60a5fa', marginTop: 4, display: 'flex', alignItems: 'center', gap: 6 }}>
                       <Clock size={14} />
                       <span>
                         {new Date(b.start_time).toLocaleString([], { dateStyle: 'medium', timeStyle: 'short' })} —{' '}
@@ -385,7 +385,7 @@ export const ResourcesPage: React.FC = () => {
             <div style={{ background: 'rgba(99, 102, 241, 0.08)', padding: 12, borderRadius: 8, border: '1px solid rgba(99,102,241,0.2)', fontSize: '0.85rem', color: 'var(--text-main)' }}>
               <div><strong>Location:</strong> {selectedResource.location}</div>
               <div><strong>Capacity:</strong> {selectedResource.capacity} students</div>
-              <div style={{ marginTop: 4, color: '#6366f1', fontSize: '0.78rem' }}>
+              <div style={{ marginTop: 4, color: '#3b82f6', fontSize: '0.78rem' }}>
                 Protected by PostgreSQL Transaction 1 with FOR UPDATE row locks & GiST exclusion constraints.
               </div>
             </div>

@@ -60,7 +60,7 @@ export const AlertBanner: React.FC<AlertBannerProps> = ({
         ) : isConflict ? (
           <ShieldAlert size={20} color="#f43f5e" />
         ) : (
-          <Info size={20} color="#6366f1" />
+          <Info size={20} color="#3b82f6" />
         )}
         <div style={{ fontWeight: 700, fontSize: '0.95rem', color: textColor }}>
           {title || (isConflict ? 'Database Transaction Notice' : isSuccess ? 'Success' : 'Information')}

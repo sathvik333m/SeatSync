@@ -309,7 +309,7 @@ export const SessionsPage: React.FC = () => {
                 >
                   <div>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 }}>
-                      <span style={{ fontSize: '0.75rem', color: '#c084fc', fontWeight: 700 }}>
+                      <span style={{ fontSize: '0.75rem', color: '#60a5fa', fontWeight: 700 }}>
                         {s.teaching_format === 'group' ? 'GROUP WORKSHOP' : '1-ON-1 SESSION'}
                       </span>
                       <StatusBadge status={s.status} />
@@ -323,7 +323,7 @@ export const SessionsPage: React.FC = () => {
                       Teacher: <strong style={{ color: 'var(--text-main)' }}>{s.teacher_name}</strong> {isTeacher && '(You)'}
                     </div>
 
-                    <div style={{ fontSize: '0.82rem', color: '#818cf8', display: 'flex', alignItems: 'center', gap: 6, marginBottom: 6 }}>
+                    <div style={{ fontSize: '0.82rem', color: '#60a5fa', display: 'flex', alignItems: 'center', gap: 6, marginBottom: 6 }}>
                       <Clock size={15} />
                       <span>
                         {new Date(s.start_time).toLocaleDateString([], { weekday: 'short', month: 'short', day: 'numeric' })}{' '}
@@ -350,7 +350,7 @@ export const SessionsPage: React.FC = () => {
                           style={{
                             height: '100%',
                             width: `${capacityPercent}%`,
-                            background: capacityPercent >= 100 ? '#f43f5e' : '#6366f1',
+                            background: capacityPercent >= 100 ? '#f43f5e' : '#3b82f6',
                             transition: 'width 0.3s ease',
                           }}
                         />
@@ -424,7 +424,7 @@ export const SessionsPage: React.FC = () => {
                       <StatusBadge status={req.status} />
                     </div>
 
-                    <div style={{ fontSize: '0.85rem', color: '#818cf8', fontWeight: 600, marginBottom: 4 }}>
+                    <div style={{ fontSize: '0.85rem', color: '#60a5fa', fontWeight: 600, marginBottom: 4 }}>
                       Listing: {req.listing_title} ({req.teaching_format})
                     </div>
 

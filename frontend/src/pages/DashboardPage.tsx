@@ -97,7 +97,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ setActiveTab }) =>
               style={{ borderColor: 'rgba(99, 102, 241, 0.4)' }}
               onClick={() => setActiveTab('dbms-lab')}
             >
-              <TrendingUp size={18} color="#818cf8" /> DBMS Evaluation Lab
+              <TrendingUp size={18} color="#60a5fa" /> DBMS Evaluation Lab
             </button>
           </div>
         </div>
@@ -116,7 +116,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ setActiveTab }) =>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
             <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)', fontWeight: 600 }}>CAMPUS RESOURCES</span>
             <div style={{ background: 'rgba(99, 102, 241, 0.15)', padding: 8, borderRadius: 10 }}>
-              <Building2 size={20} color="#818cf8" />
+              <Building2 size={20} color="#60a5fa" />
             </div>
           </div>
           <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--text-main)' }}>
@@ -146,13 +146,13 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ setActiveTab }) =>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
             <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)', fontWeight: 600 }}>PUBLISHED SKILLS</span>
             <div style={{ background: 'rgba(168, 85, 247, 0.15)', padding: 8, borderRadius: 10 }}>
-              <BookOpen size={20} color="#c084fc" />
+              <BookOpen size={20} color="#60a5fa" />
             </div>
           </div>
           <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--text-main)' }}>
             {stats.publishedListings || 4}
           </div>
-          <div style={{ fontSize: '0.78rem', color: '#a855f7', marginTop: 4 }}>
+          <div style={{ fontSize: '0.78rem', color: '#3b82f6', marginTop: 4 }}>
             React, SQL, Python, Docker
           </div>
         </div>
@@ -221,7 +221,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ setActiveTab }) =>
 
                   <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', fontSize: '0.82rem', color: 'var(--text-muted)' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
-                      <Users size={14} color="#818cf8" />
+                      <Users size={14} color="#60a5fa" />
                       <span>Teacher: <strong style={{ color: 'var(--text-main)' }}>{session.teacher}</strong></span>
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
@@ -292,7 +292,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ setActiveTab }) =>
                   </div>
 
                   <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: 6 }}>
-                    <Clock size={14} color="#818cf8" />
+                    <Clock size={14} color="#60a5fa" />
                     <span>
                       {new Date(res.start_time).toLocaleDateString([], { weekday: 'short', month: 'short', day: 'numeric' })}{' '}
                       ({new Date(res.start_time).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} -{' '}

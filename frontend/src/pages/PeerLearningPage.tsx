@@ -156,7 +156,7 @@ export const PeerLearningPage: React.FC = () => {
       {/* Top Header */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 24, flexWrap: 'wrap', gap: 16 }}>
         <div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8, color: '#c084fc', fontWeight: 600, fontSize: '0.85rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8, color: '#60a5fa', fontWeight: 600, fontSize: '0.85rem' }}>
             <GraduationCap size={16} /> MODULE B: PEER LEARNING MARKETPLACE
           </div>
           <h1 style={{ fontSize: '2.2rem', color: 'var(--text-main)', marginTop: 4 }}>Skill Exchange & Workshops</h1>
@@ -167,7 +167,7 @@ export const PeerLearningPage: React.FC = () => {
 
         <button
           className="btn btn-primary"
-          style={{ background: 'linear-gradient(135deg, #a855f7 0%, #6366f1 100%)' }}
+          style={{ background: 'linear-gradient(135deg, #3b82f6 0%, #3b82f6 100%)' }}
           onClick={() => setIsPublishModalOpen(true)}
         >
           <PlusCircle size={18} /> Publish a Skill to Teach
@@ -264,7 +264,7 @@ export const PeerLearningPage: React.FC = () => {
                         fontSize: '0.72rem',
                         padding: '3px 8px',
                         background: 'rgba(168, 85, 247, 0.15)',
-                        color: '#c084fc',
+                        color: '#60a5fa',
                         borderRadius: 6,
                         fontWeight: 700,
                       }}
@@ -276,7 +276,7 @@ export const PeerLearningPage: React.FC = () => {
                         fontSize: '0.72rem',
                         padding: '3px 8px',
                         background: 'rgba(99, 102, 241, 0.15)',
-                        color: '#818cf8',
+                        color: '#60a5fa',
                         borderRadius: 6,
                         fontWeight: 700,
                         textTransform: 'capitalize',
@@ -325,7 +325,7 @@ export const PeerLearningPage: React.FC = () => {
                       width: 28,
                       height: 28,
                       borderRadius: '50%',
-                      background: '#4f46e5',
+                      background: '#2563eb',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',

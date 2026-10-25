@@ -137,7 +137,7 @@ export const DbmsLabPage: React.FC = () => {
     <div style={{ maxWidth: 1200, margin: '0 auto', padding: '32px 24px' }}>
       {/* Header */}
       <div style={{ marginBottom: 28 }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8, color: '#818cf8', fontWeight: 600, fontSize: '0.85rem' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, color: '#60a5fa', fontWeight: 600, fontSize: '0.85rem' }}>
           <Database size={16} /> COLLEGE DBMS EVALUATION LAB & ANALYTICS
         </div>
         <h1 style={{ fontSize: '2.2rem', color: 'var(--text-main)', marginTop: 4 }}>
@@ -242,12 +242,12 @@ export const DbmsLabPage: React.FC = () => {
                   {skillsReport.map((row) => (
                     <tr key={row.skill_id} style={{ borderBottom: '1px solid var(--border-subtle)' }}>
                       <td style={{ padding: '14px 16px', fontWeight: 600, color: 'var(--text-main)' }}>{row.skill}</td>
-                      <td style={{ padding: '14px 16px', color: '#818cf8' }}>{row.category}</td>
+                      <td style={{ padding: '14px 16px', color: '#60a5fa' }}>{row.category}</td>
                       <td style={{ padding: '14px 16px' }}>{row.listings}</td>
                       <td style={{ padding: '14px 16px', fontWeight: 700, color: '#10b981' }}>{row.requests}</td>
                       <td style={{ padding: '14px 16px', width: 180 }}>
                         <div style={{ height: 6, background: 'var(--border-subtle)', borderRadius: 3, overflow: 'hidden' }}>
-                          <div style={{ height: '100%', width: `${Math.min(100, row.requests * 25)}%`, background: '#6366f1' }} />
+                          <div style={{ height: '100%', width: `${Math.min(100, row.requests * 25)}%`, background: '#3b82f6' }} />
                         </div>
                       </td>
                     </tr>
@@ -290,7 +290,7 @@ export const DbmsLabPage: React.FC = () => {
                     <tr key={row.session_id} style={{ borderBottom: '1px solid var(--border-subtle)' }}>
                       <td style={{ padding: '14px 16px', fontFamily: 'var(--font-mono)', color: 'var(--text-dim)' }}>#{row.session_id}</td>
                       <td style={{ padding: '14px 16px', fontWeight: 600, color: 'var(--text-main)' }}>{row.title}</td>
-                      <td style={{ padding: '14px 16px', color: '#c084fc' }}>{row.teacher}</td>
+                      <td style={{ padding: '14px 16px', color: '#60a5fa' }}>{row.teacher}</td>
                       <td style={{ padding: '14px 16px', color: '#34d399' }}>{row.room}</td>
                       <td style={{ padding: '14px 16px', fontSize: '0.82rem', color: '#94a3b8' }}>
                         {new Date(row.start_time).toLocaleString([], { dateStyle: 'short', timeStyle: 'short' })}
@@ -319,12 +319,12 @@ export const DbmsLabPage: React.FC = () => {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))', gap: 24 }}>
               {/* Teachers */}
               <div style={{ background: 'var(--bg-input)', padding: 18, borderRadius: 12, border: '1px solid var(--border-subtle)' }}>
-                <h3 style={{ fontSize: '1.05rem', color: '#c084fc', marginBottom: 12 }}>Top Teachers</h3>
+                <h3 style={{ fontSize: '1.05rem', color: '#60a5fa', marginBottom: 12 }}>Top Teachers</h3>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
                   {leaderboard.topTeachers?.map((t: any, idx: number) => (
                     <div key={t.user_id} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '10px 14px', background: 'var(--bg-card)', border: '1px solid var(--border-subtle)', borderRadius: 8 }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                        <span style={{ fontWeight: 800, color: '#818cf8', width: 20 }}>#{idx + 1}</span>
+                        <span style={{ fontWeight: 800, color: '#60a5fa', width: 20 }}>#{idx + 1}</span>
                         <div>
                           <div style={{ fontWeight: 600, color: 'var(--text-main)' }}>{t.name}</div>
                           <div style={{ fontSize: '0.75rem', color: 'var(--text-dim)' }}>{t.email}</div>
@@ -349,7 +349,7 @@ export const DbmsLabPage: React.FC = () => {
                           <div style={{ fontSize: '0.75rem', color: 'var(--text-dim)' }}>{l.email}</div>
                         </div>
                       </div>
-                      <span style={{ fontWeight: 700, color: '#a855f7' }}>{l.attended_sessions} Attended</span>
+                      <span style={{ fontWeight: 700, color: '#3b82f6' }}>{l.attended_sessions} Attended</span>
                     </div>
                   ))}
                 </div>
@@ -388,7 +388,7 @@ export const DbmsLabPage: React.FC = () => {
                   {demandReport.map((row) => (
                     <tr key={row.resource_id} style={{ borderBottom: '1px solid var(--border-subtle)' }}>
                       <td style={{ padding: '14px 16px', fontWeight: 600, color: 'var(--text-main)' }}>{row.name}</td>
-                      <td style={{ padding: '14px 16px', textTransform: 'capitalize', color: '#818cf8' }}>
+                      <td style={{ padding: '14px 16px', textTransform: 'capitalize', color: '#60a5fa' }}>
                         {row.resource_type.replace('_', ' ')}
                       </td>
                       <td style={{ padding: '14px 16px' }}>{row.capacity} students</td>
@@ -478,7 +478,7 @@ export const DbmsLabPage: React.FC = () => {
             {explainData ? (
               <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
                 <div>
-                  <div style={{ fontWeight: 600, color: '#818cf8', marginBottom: 6, fontSize: '0.9rem' }}>
+                  <div style={{ fontWeight: 600, color: '#60a5fa', marginBottom: 6, fontSize: '0.9rem' }}>
                     1. Scheduled Sessions Partial Index Scan (<code>idx_sessions_start</code>):
                   </div>
                   <pre
@@ -497,7 +497,7 @@ export const DbmsLabPage: React.FC = () => {
                 </div>
 
                 <div>
-                  <div style={{ fontWeight: 600, color: '#818cf8', marginBottom: 6, fontSize: '0.9rem' }}>
+                  <div style={{ fontWeight: 600, color: '#60a5fa', marginBottom: 6, fontSize: '0.9rem' }}>
                     2. Resource Demand Aggregation & HashAggregate Plan:
                   </div>
                   <pre
@@ -565,7 +565,7 @@ export const DbmsLabPage: React.FC = () => {
                           {log.entity_type} #{log.entity_id}
                         </span>
                       </td>
-                      <td style={{ padding: '12px 14px', fontWeight: 700, color: '#818cf8' }}>
+                      <td style={{ padding: '12px 14px', fontWeight: 700, color: '#60a5fa' }}>
                         {log.action}
                       </td>
                       <td style={{ padding: '12px 14px', fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: 'var(--text-dim)', maxWidth: 300, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>

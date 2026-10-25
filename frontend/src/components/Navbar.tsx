@@ -75,7 +75,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
               width: 38,
               height: 38,
               borderRadius: 10,
-              background: 'linear-gradient(135deg, #6366f1 0%, #a855f7 100%)',
+              background: 'linear-gradient(135deg, #3b82f6 0%, #3b82f6 100%)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -93,7 +93,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
                 style={{
                   fontSize: '0.68rem',
                   background: 'rgba(99, 102, 241, 0.2)',
-                  color: '#818cf8',
+                  color: '#60a5fa',
                   padding: '2px 8px',
                   borderRadius: 6,
                   fontWeight: 700,
@@ -148,7 +148,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
             }}
             onClick={() => setActiveTab('dbms-lab')}
           >
-            <Database size={16} color="#818cf8" /> DBMS Evaluation Lab
+            <Database size={16} color="#60a5fa" /> DBMS Evaluation Lab
           </button>
           {isAdmin && (
             <button

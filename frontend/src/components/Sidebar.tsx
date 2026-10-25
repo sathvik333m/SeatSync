@@ -80,7 +80,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => 
               width: 40,
               height: 40,
               borderRadius: 12,
-              background: 'linear-gradient(135deg, #6366f1 0%, #a855f7 100%)',
+              background: 'linear-gradient(135deg, #3b82f6 0%, #3b82f6 100%)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -99,7 +99,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => 
                 style={{
                   fontSize: '0.65rem',
                   background: 'rgba(99, 102, 241, 0.15)',
-                  color: '#6366f1',
+                  color: '#3b82f6',
                   padding: '2px 6px',
                   borderRadius: 6,
                   fontWeight: 700,
@@ -128,7 +128,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => 
                 className={`sidebar-link ${isActive ? 'active' : ''}`}
                 style={item.highlight && !isActive ? { borderColor: 'rgba(99, 102, 241, 0.3)' } : {}}
               >
-                <Icon size={18} color={isActive ? '#fff' : item.highlight ? '#818cf8' : 'currentColor'} />
+                <Icon size={18} color={isActive ? '#fff' : item.highlight ? '#60a5fa' : 'currentColor'} />
                 <span style={{ flex: 1 }}>{item.label}</span>
                 {item.badge && !isActive && (
                   <span
@@ -167,7 +167,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => 
             }}
             title={`Switch to ${theme === 'dark' ? 'Light' : 'Dark'} Mode`}
           >
-            {theme === 'dark' ? <Sun size={15} color="#fbbf24" /> : <Moon size={15} color="#6366f1" />}
+            {theme === 'dark' ? <Sun size={15} color="#fbbf24" /> : <Moon size={15} color="#3b82f6" />}
             <span>{theme === 'dark' ? 'Light Mode' : 'Dark Mode'}</span>
           </button>
 
@@ -227,7 +227,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => 
                       ? 'linear-gradient(135deg, #ec4899, #be185d)'
                       : user?.user_id === 3
                       ? 'linear-gradient(135deg, #f59e0b, #d97706)'
-                      : 'linear-gradient(135deg, #6366f1, #4f46e5)',
+                      : 'linear-gradient(135deg, #3b82f6, #2563eb)',
                 }}
               >
                 {user?.name ? user.name.split(' ').map((n) => n[0]).join('') : 'U'}
@@ -295,14 +295,14 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => 
                     }}
                   >
                     <div>
-                      <div style={{ fontSize: '0.82rem', fontWeight: 600, color: isCurrent ? '#6366f1' : 'var(--text-main)' }}>
+                      <div style={{ fontSize: '0.82rem', fontWeight: 600, color: isCurrent ? '#3b82f6' : 'var(--text-main)' }}>
                         {p.name}
                       </div>
                       <div style={{ fontSize: '0.7rem', color: 'var(--text-dim)' }}>
                         {p.title}
                       </div>
                     </div>
-                    {isCurrent && <CheckCircle size={15} color="#6366f1" />}
+                    {isCurrent && <CheckCircle size={15} color="#3b82f6" />}
                   </div>
                 );
               })}

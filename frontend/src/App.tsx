@@ -40,7 +40,7 @@ const MainLayout: React.FC = () => {
         >
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-              <Layers size={15} color="#6366f1" />
+              <Layers size={15} color="#3b82f6" />
               <span style={{ color: 'var(--text-main)', fontWeight: 600 }}>SeatSync</span> — Campus Resource Reservation & Peer Learning
             </div>
 
@@ -49,7 +49,7 @@ const MainLayout: React.FC = () => {
                 <Database size={14} color="#10b981" /> PostgreSQL 16
               </span>
               <span style={{ display: 'inline-flex', alignItems: 'center', gap: 5 }}>
-                <ShieldCheck size={14} color="#6366f1" /> btree_gist GiST Exclusions
+                <ShieldCheck size={14} color="#3b82f6" /> btree_gist GiST Exclusions
               </span>
               <span>DBMS College Project</span>
             </div>
