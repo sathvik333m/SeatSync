@@ -638,21 +638,42 @@ export const SessionsPage: React.FC = () => {
               <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--text-muted)', marginBottom: 6 }}>
                 Select Scheduled Session to Enroll into:
               </label>
-              <select
-                value={targetSessionId}
-                onChange={(e) => setTargetSessionId(e.target.value)}
-                className="input-field"
-                required
-              >
-                <option value="">-- Choose an upcoming scheduled session --</option>
-                {sessions
-                  .filter((s) => Number(s.listing_id) === Number(requestToEnroll.listing_id) && s.status === 'scheduled')
-                  .map((s) => (
-                    <option key={s.session_id} value={s.session_id}>
-                      Session #{s.session_id} on {new Date(s.start_time).toLocaleDateString()} ({s.enrolled_learners}/{s.max_participants} seats filled)
-                    </option>
-                  ))}
-              </select>
+              {(() => {
+                const eligibleSessions = sessions.filter(
+                  (s) => Number(s.listing_id) === Number(requestToEnroll.listing_id) && s.status === 'scheduled'
+                );
+                return eligibleSessions.length === 0 ? (
+                  <div
+                    style={{
+                      padding: '14px 16px',
+                      background: 'rgba(251, 191, 36, 0.08)',
+                      border: '1px solid rgba(251, 191, 36, 0.3)',
+                      borderRadius: 8,
+                      fontSize: '0.85rem',
+                      color: '#fbbf24',
+                    }}
+                  >
+                    ⚠️ No scheduled sessions found for this listing yet.<br />
+                    <span style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>
+                      Close this modal and click <strong style={{ color: 'var(--text-main)' }}>"Schedule a Session with Room"</strong> at the top to create a session for <em>{requestToEnroll.listing_title}</em> first. Then come back here to enroll the learner.
+                    </span>
+                  </div>
+                ) : (
+                  <select
+                    value={targetSessionId}
+                    onChange={(e) => setTargetSessionId(e.target.value)}
+                    className="input-field"
+                    required
+                  >
+                    <option value="">-- Choose an upcoming scheduled session --</option>
+                    {eligibleSessions.map((s) => (
+                      <option key={s.session_id} value={s.session_id}>
+                        Session #{s.session_id} on {new Date(s.start_time).toLocaleDateString()} — {new Date(s.start_time).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} ({s.enrolled_learners}/{s.max_participants} seats filled)
+                      </option>
+                    ))}
+                  </select>
+                );
+              })()}
             </div>
 
             <div style={{ fontSize: '0.78rem', color: 'var(--text-dim)' }}>
@@ -670,7 +691,7 @@ export const SessionsPage: React.FC = () => {
               <button
                 type="submit"
                 className="btn btn-primary"
-                disabled={submitting || !targetSessionId}
+                disabled={submitting || !targetSessionId || sessions.filter((s) => Number(s.listing_id) === Number(requestToEnroll.listing_id) && s.status === 'scheduled').length === 0}
               >
                 {submitting ? 'Executing...' : 'Confirm Enrollment'}
               </button>
